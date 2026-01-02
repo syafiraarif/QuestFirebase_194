@@ -1,6 +1,5 @@
 package com.example.myfirebase.view
 
-import android.graphics.drawable.Icon
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -39,6 +38,7 @@ import com.example.myfirebase.viewmodel.HomeViewModel
 import com.example.myfirebase.viewmodel.PenyediaViewModel
 import com.example.myfirebase.R
 import com.example.myfirebase.modeldata.Siswa
+import com.example.myfirebase.view.route.DestinasiHome
 import com.example.myfirebase.viewmodel.StatusUiSiswa
 
 @OptIn(ExperimentalMaterial3Api::class)
