@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.myfirebase.modeldata.DetailSiswa
 import com.example.myfirebase.modeldata.UIStateSiswa
+import com.example.myfirebase.modeldata.toDataSiswa
 import com.example.myfirebase.repositori.RepositorySiswa
 import com.example.myfirebase.view.route.DestinasiDetail
 import kotlinx.coroutines.launch
@@ -46,7 +47,17 @@ class EditViewModel(
         }
     }
 
-
-
-
+    suspend fun editSatuSiswa() {
+        if (validasiInput(uiStateSiswa.detailSiswa)) {
+            try {
+                repositorySiswa.editSatuSiswa(
+                    idSiswa,
+                    uiStateSiswa.detailSiswa.toDataSiswa()
+                )
+                println("Update Sukses: $idSiswa")
+            } catch (e: Exception) {
+                println("Update Error: ${e.message}")
+            }
+        }
+    }
 }
