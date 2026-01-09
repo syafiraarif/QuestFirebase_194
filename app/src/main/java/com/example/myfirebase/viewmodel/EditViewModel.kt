@@ -15,5 +15,8 @@ class EditViewModel(
     savedStateHandle: SavedStateHandle,
     private val repositorySiswa: RepositorySiswa
 ) : ViewModel() {
+    var uiStateSiswa by mutableStateOf(value = UIStateSiswa())
+        private set
+
 
 }
